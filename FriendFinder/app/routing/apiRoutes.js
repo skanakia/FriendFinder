@@ -14,29 +14,29 @@ module.exports = function(app){
         var newFriend = req.body;
         var newResponses = newFriend.answers;
         var newTotal = 0;
-        var bestScore = 10000000;
-        var bestName = "";
-        var bestPhoto = "";
-        var index = -1;
+        var match = {
+            name: "",
+            photo: "",
+            score: 10000
+        }
+  
 
         for(var i = 0; i < friendList.length; i++){
-            NewTotal = 0;
-            for(var j = 0; j < newFriend.answers.length; j++){
-                var diff = Math.abs(newFriend.answers[j] - friendList[i].answers[j]);
-                newTotal += diff;
+            newTotal = 0;
+            for(var j = 0; j < newResponses.length; j++){
+                newTotal += Math.abs(newResponses[j] - friendList[i].answers[j]);
+                console.log(newTotal);
             }
-            if(newTotal < bestScore){
-                bestScore = NewTotal;
-                bestName = friendList[i].name;
-                bestPhoto = friendList[i].photo;
-                index = i;
+            if(newTotal < match.score){
+                match.score = newTotal;
+                console.log(match.score);
+                match.name = friendList[i].name;
+                match.photo = friendList[i].photo;
             }
         }
-        
-        console.log('Best Match: ' + bestName);
-        console.log("link to best photo: " + bestPhoto)
+
         friendList.push(newFriend);
-        res.json(friendList[index]);
+        res.json(match);
     });
 };
 
