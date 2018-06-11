@@ -186,6 +186,25 @@
             <button type="button" class="btn btn-primary" id="submit-btn">Submit</button>
         </div>
     </div>
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" id="modal">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script>
@@ -214,8 +233,19 @@
 
                 $.post("/api/friends", newFriend)
                     .then(function (data) {
-                        // console.log(data);
-                    });
+                        console.log(data);
+                    
+                    newDiv = $("<div>");
+                    $(".modal-title").text("Friend match: " + data.name);
+                    newImage = $("<img>");
+                    $(newImage).attr({"src": data.photo, "width": "200", "height": "200"});
+                    $(newDiv).append(newImage);
+                    $(".modal-body").empty();
+                    $(".modal-body").append(newDiv);
+                    $('.modal').modal('show');
+                });
+
+                
             });
 
         }); 
