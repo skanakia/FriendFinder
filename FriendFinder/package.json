@@ -1,0 +1,30 @@
+{
+  "name": "FriendFinder",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/skanakia/FriendFinder.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/skanakia/FriendFinder/issues"
+  },
+  "homepage": "https://github.com/skanakia/FriendFinder#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "dnode": "^1.2.2",
+    "dotenv": "^6.0.0",
+    "express": "^4.16.3",
+    "jquery": "^3.3.1",
+    "jsdom": "^11.11.0",
+    "nodeQuery": "0.0.9-1",
+    "path": "^0.12.7"
+  }
+}

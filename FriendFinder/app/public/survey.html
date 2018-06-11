@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <script src="../data/friend.js"></script> -->
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" /> -->
+</head>
+
+<body>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h2>Friend Finder</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h2>Please fill out the survey below to be matched with a friend!</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <a href="./home">
+                        <button type="button" class="btn btn-primary" id="home-btn">Home</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header">
+            <h1>Survey Questions</h1>
+        </div>
+        <div class="card-body">
+            <h2 class="card-title">About You</h2>
+
+            <p class="card-text">
+                <form>
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1">Name</label>
+                        <input type="email" class="form-control" id="name" placeholder="John Smith...">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlInput2">Link to picture</label>
+                        <input type="email" class="form-control" id="profile-pic" placeholder="http://profilepic.com...">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlSelect1">
+                            <h2>Question 1</h2>
+                            <h5>How sure of yourself are you? (1 being the least, 5 being the most)</h5>
+                        </label>
+                        <select class="form-control" id="question1">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlSelect1">
+                            <h2>Question 2</h2>
+                            <h5>How outgoing are you? (1 being the least, 5 being the most)</h5>
+                        </label>
+                        <select class="form-control" id="question2">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlSelect1">
+                            <h2>Question 3</h2>
+                            <h5>How observant are you? (1 being the least, 5 being the most)</h5>
+                        </label>
+                        <select class="form-control" id="question3">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlSelect1">
+                            <h2>Question 4</h2>
+                            <h5>How decisive are you? (1 being the least, 5 being the most)</h5>
+                        </label>
+                        <select class="form-control" id="question4">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlSelect1">
+                            <h2>Question 5</h2>
+                            <h5>How much emphasis do you place on humor? (1 being the least, 5 being the most)</h5>
+                        </label>
+                        <select class="form-control" id="question5">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlSelect1">
+                            <h2>Question 6</h2>
+                            <h5>How sensitive are you? (1 being the least, 5 being the most)</h5>
+                        </label>
+                        <select class="form-control" id="question6">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlSelect1">
+                            <h2>Question 7</h2>
+                            <h5>How much do you like animals? (1 being the least, 5 being the most)</h5>
+                        </label>
+                        <select class="form-control" id="question7">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlSelect1">
+                            <h2>Question 8</h2>
+                            <h5>How spiritual are you? (1 being the least, 5 being the most)</h5>
+                        </label>
+                        <select class="form-control" id="question8">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlSelect1">
+                            <h2>Question 9</h2>
+                            <h5>How honest are you? (1 being the least, 5 being the most)</h5>
+                        </label>
+                        <select class="form-control" id="question9">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlSelect1">
+                            <h2>Question 10</h2>
+                            <h5>How much emphasis do you place on intelligence? (1 being the least, 5 being the most)</h5>
+                        </label>
+                        <select class="form-control" id="question10">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
+                    </div>
+                </form>
+            </p>
+            <button type="button" class="btn btn-primary" id="submit-btn">Submit</button>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#submit-btn").on("click", function (event) {
+                console.log("working");
+                event.preventDefault();
+                var newFriend = {
+                    name: $("#name").val().trim(),
+                    photo: $("#profile-pic").val().trim(),
+                    answers: [
+                        $("#question1").val(),
+                        $("#question2").val(),
+                        $("#question3").val(),
+                        $("#question4").val(),
+                        $("#question5").val(),
+                        $("#question6").val(),
+                        $("#question7").val(),
+                        $("#question8").val(),
+                        $("#question9").val(),
+                        $("#question10").val()
+                    ]
+                };
+
+
+
+                $.post("/api/friends", newFriend)
+                    .then(function (data) {
+                        // console.log(data);
+                    });
+            });
+
+        }); 
+    </script>
+
+</body>
+
+</html>
