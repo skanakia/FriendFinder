@@ -10,8 +10,7 @@ module.exports = function(app){
         res.json(friendList);
     });
 
-    app.post("/api/new", function(req, res) {
-      //setup variables for finding match
+    app.post("/api/friends", function(req, res) {
         var newFriend = req.body;
         var newScore = newFriend.answers;
         var newTotal = 0;
@@ -20,12 +19,10 @@ module.exports = function(app){
         var bestPhoto = "";
 
         for(var i = 0; i < friendList.length; i++){
-            //Iterate through the whole list of friends already in database
             NewTotal = 0;
 
             for(var j = 0; j < newScore.length; j++){
-                //for each friend calculate the total value
-                var diff = Math.abs(newScore[j] - friends[i].answers[j]);
+                var diff = Math.abs(newScore[j] - friendList[i].answers[j]);
                 newTotal += diff;
             }
             if(newTotal < bestScore){
