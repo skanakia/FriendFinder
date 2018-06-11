@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
+    <title>Friend Finder</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -210,7 +210,7 @@
     <script>
         $(document).ready(function () {
             $("#submit-btn").on("click", function (event) {
-                console.log("working");
+                // console.log("working");
                 event.preventDefault();
                 var newFriend = {
                     name: $("#name").val().trim(),
@@ -233,7 +233,7 @@
 
                 $.post("/api/friends", newFriend)
                     .then(function (data) {
-                        console.log(data);
+                        // console.log(data);
                     
                     newDiv = $("<div>");
                     $(".modal-title").text("Friend match: " + data.name);

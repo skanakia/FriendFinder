@@ -1,7 +1,6 @@
 var path = require("path");
 var friendList = require("../data/friend");
 
-// var app = express();
 
 
 module.exports = function(app){
@@ -25,11 +24,11 @@ module.exports = function(app){
             newTotal = 0;
             for(var j = 0; j < newResponses.length; j++){
                 newTotal += Math.abs(newResponses[j] - friendList[i].answers[j]);
-                console.log(newTotal);
+                // console.log(newTotal);
             }
             if(newTotal < match.score){
                 match.score = newTotal;
-                console.log(match.score);
+                // console.log(match.score);
                 match.name = friendList[i].name;
                 match.photo = friendList[i].photo;
             }
